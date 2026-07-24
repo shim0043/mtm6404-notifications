@@ -13,9 +13,34 @@ function App() {
   };
 
   const clearAll = () => {
-    setNotifications();
+    setNotifications([]);
   };
 
+  return (
+    <div className="notifications-wrapper">
+      <NotificationWrapper 
+        count={notifications.length} 
+        onClearAll={clearAll}
+      >
+
+        {notifications.length === 0 ? (
+          <p className="text-muted text-center">You have no notifications.</p>
+        ) : (
+          <div className="notification-info">
+            {notifications.map((notification) => (
+              <NotificationItem
+                key={notification.id}
+                id={notification.id}
+                name={notification.name}
+                message={notification.message}
+                onClear={clearIndividual}
+              />
+            ))}
+          </div>
+        )}
+      </NotificationWrapper>
+    </div>
+  );
 }
 
 export default App;
