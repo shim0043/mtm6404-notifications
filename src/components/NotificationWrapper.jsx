@@ -12,6 +12,10 @@ function NotificationWrapper({ count, onClearAll, children }) {
                 onClick={onClearAll}
                 >Clear All</button>
             )}
+
+            <div>
+                {children}
+            </div>
         </div>
     );
 }
