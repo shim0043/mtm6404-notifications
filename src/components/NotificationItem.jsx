@@ -9,6 +9,11 @@ function NotificationItem({ id, name, message, onClear }) {
                 <p className="notification-message">{message}</p>
                 <small className="read-the-docs">ID: {id}</small>
             </div>
+
+            <button 
+                className="clear-btn ms-3"
+                onClick={() => onClear(id)}
+            >Clear</button>
         </div>
     );
 }
