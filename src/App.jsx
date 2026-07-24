@@ -13,8 +13,9 @@ function App() {
   };
 
   const clearAll = () => {
-    setNotifications([]);
+    setNotifications();
   };
+
 }
 
 export default App;
