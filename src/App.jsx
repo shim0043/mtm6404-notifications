@@ -9,7 +9,7 @@ function App() {
 
   const clearIndividual = (id) => {
     const updated = notifications.filter((item) => item.id !== id);
-    setNotifications(updated);
+    setNotifications(updated); 
   };
 
   const clearAll = () => {
